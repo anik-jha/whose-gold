@@ -1,0 +1,14 @@
+{
+ "arxiv_id": "2604.23478",
+ "resolved": true,
+ "title": "JudgeSense: A Benchmark for Prompt Sensitivity in LLM-as-a-Judge Systems",
+ "published": "2026-04-26T00:08:30Z",
+ "updated": "2026-05-07T23:00:54Z",
+ "authors": [
+  "Rohith Reddy Bellibatlu",
+  "Edward Raff",
+  "Wenbin Zhang"
+ ],
+ "abstract": "Large language models are widely adopted as automated evaluation judges, yet the stability of their verdicts under semantically equivalent prompt rephrasings remains largely unexamined. We conduct a systematic empirical study of prompt-induced decision instability across multiple evaluation tasks and judge architectures. To facilitate this analysis, we release JudgeSense, a benchmark comprising hand-validated prompt-paraphrase pairs spanning factuality, coherence, relevance, and preference, drawn from established NLP benchmarks and accompanied by comprehensive decision logs. The benchmark enables the measurement of judge stability across equivalent prompts, allowing researchers to assess whether stability correlates with model scale or instruction-tuning, and to identify which tasks are most sensitive to prompt wording. Our evaluation reveals that coherence remains the primary task for distinguishing judge behavior, while factuality judgments demonstrate high stability under standard conditions. Pairwise evaluation tasks consistently exhibit position bias. Crucially, we find that model scale is not a reliable proxy for consistency; notably, as an interesting result in our analysis, the largest and newest models are not the most consistent.",
+ "retrieved_utc": "2026-08-22T05:19:36Z"
+}

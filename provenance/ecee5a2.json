@@ -1,0 +1,18 @@
+{
+  "commit": "ecee5a2",
+  "commit_metadata": "commit ecee5a25aa457e818d2176f935606bf17d727e18\nAuthor:     Anik Jha <anik.k.jha@gmail.com>\nAuthorDate: Sun Aug 9 07:59:22 2026 -0700\nCommit:     Anik Jha <anik.k.jha@gmail.com>\nCommitDate: Sun Aug 9 07:59:22 2026 -0700\n\n    [kickoff] adopt MultiPref as the disagreement corpus; stats module + invariant tests\n    \n    Problem: HMDA supplies label multiplicity from a single annotator (the lender), not\n    expert disagreement, leaving the paper exposed to HAIC's own theme. Needed a corpus\n    with genuine per-annotator labels.\n    \n    Evidence: runs/h0/eval_multipref.json. allenai/multipref, n=10,461, exactly 4\n    annotators per item split 2 expert / 2 normal on a 5-point ordinal scale.\n    Contested 91.397% (5pt) and 78.922% (coarse A/T/B), mean normalized entropy 0.4964\n    -> passes the pre-registered bar (>=5% contested, <=85% unanimous) by a wide margin.\n    Expert-pair split 50.110%; expert-vs-normal majority divergence 49.804%, which makes\n    \"expert disagreement\" measurable directly instead of by proxy.\n    tests: 22 passed in 0.04s, including the unanimity invariant (every aggregator must\n    equal majority vote when annotators agree) and the erasure-definition tests.\n    \n    Next: shared harness (batched local inference + judge wrapper), then H2 erasure.\n",
+  "h1_ranking_milestones": [
+    {
+      "id": "h1-rankings",
+      "title": "H1: team-configuration ranking reversal",
+      "status": "planned",
+      "eta": "2 days",
+      "done_when": {
+        "type": "json_key",
+        "path": "runs/h1/eval.json",
+        "key": "kendall_tau"
+      },
+      "notes": "PRE-REGISTERED KILL: Kendall tau > 0.9 between disagreement-aware and single-label rankings across all team configurations - report the null and stop. Baselines a reviewer will demand: majority vote, Dawid-Skene, and STABLEVAL (2605.02122) itself. Five team configs: agent-only, human-only, agent-proposes/human-reviews, human-proposes/agent-reviews, agent-with-abstention+escalation."
+    }
+  ]
+}

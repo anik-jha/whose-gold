@@ -1,0 +1,18 @@
+{
+  "check": "prefill-logit vs llama.cpp JSON generation, same weights",
+  "n": 500,
+  "exact_agreement_5pt": 0.944,
+  "coarse_agreement_ATB": 0.946,
+  "bar": 0.95,
+  "confusion": {
+    "B->B": 315,
+    "A->A": 149,
+    "A->B": 15,
+    "T->T": 9,
+    "B->A": 6,
+    "B->T": 2,
+    "A->T": 2,
+    "T->B": 2
+  },
+  "adopt_prefill_logit": false
+}

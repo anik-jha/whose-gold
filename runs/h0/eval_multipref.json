@@ -1,0 +1,95 @@
+{
+  "milestone": "h0-gate",
+  "corpus": "allenai/multipref",
+  "corpus_url": "https://huggingface.co/datasets/allenai/multipref",
+  "schema_read_utc": "2026-08-09",
+  "utc": "2026-08-09T14:58:48Z",
+  "wall_s": 2.3,
+  "preregistered_bars": {
+    "min_contested_fraction": 0.05,
+    "max_unanimous_fraction": 0.85
+  },
+  "n_comparisons": 10461,
+  "annotators_per_item": {
+    "4": 10461
+  },
+  "annotations_by_pool": {
+    "expert": 20922,
+    "normal": 20922
+  },
+  "label_frequency_5pt": {
+    "Tie": 10997,
+    "B-is-slightly-better": 10490,
+    "B-is-clearly-better": 9253,
+    "A-is-slightly-better": 6981,
+    "A-is-clearly-better": 4123
+  },
+  "coarse_map": {
+    "A-is-clearly-better": "A",
+    "A-is-slightly-better": "A",
+    "Tie": "T",
+    "B-is-slightly-better": "B",
+    "B-is-clearly-better": "B"
+  },
+  "defensible_set_sizes_coarse": {
+    "1": 2205,
+    "2": 5856,
+    "3": 2400
+  },
+  "mean_normalized_entropy_5pt": 0.4963628867810757,
+  "contested_fraction_5pt": 0.9139661600229424,
+  "contested_fraction_coarse": 0.7892170920562087,
+  "expert_pair_split_fraction": 0.5010993212885957,
+  "expert_vs_normal_majority_divergence": 0.4980403403116337,
+  "top_categories_by_contested_rate": [
+    [
+      "Coding",
+      0.8485607008760951,
+      799
+    ],
+    [
+      "Summarize",
+      0.8333333333333334,
+      168
+    ],
+    [
+      "Chat",
+      0.8146718146718147,
+      518
+    ],
+    [
+      "Extract",
+      0.8121546961325967,
+      181
+    ],
+    [
+      "Generation",
+      0.8065902578796562,
+      1396
+    ],
+    [
+      "Closed QA",
+      0.8,
+      175
+    ],
+    [
+      "Rewrite",
+      0.7950310559006211,
+      161
+    ],
+    [
+      "Brainstorm",
+      0.7817531305903399,
+      559
+    ],
+    [
+      "Open QA",
+      0.7752130131680868,
+      6455
+    ]
+  ],
+  "verdict": {
+    "pass": true,
+    "contested_fraction": 0.9139661600229424
+  }
+}

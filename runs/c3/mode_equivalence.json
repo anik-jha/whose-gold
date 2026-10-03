@@ -1,0 +1,24 @@
+{
+  "utc": "2026-08-09T17:16:08Z",
+  "n_compared": 500,
+  "n_failures": 0,
+  "decision_bar_coarse_agreement": 0.95,
+  "exact_agreement_5pt": 0.36,
+  "coarse_agreement_ATB": 0.472,
+  "confusion_old_to_new_coarse": {
+    "A->B": 146,
+    "B->B": 102,
+    "A->T": 80,
+    "A->A": 79,
+    "T->T": 55,
+    "T->B": 31,
+    "B->A": 3,
+    "B->T": 3,
+    "T->A": 1
+  },
+  "wall_s": 785.5,
+  "calls_per_s": 0.637,
+  "completion_tokens": 500,
+  "prompt_tokens": 419854,
+  "adopt_fast_mode": false
+}

@@ -1,0 +1,265 @@
+{
+  "milestone": "c5-robustness",
+  "utc": "2026-08-22T18:37:33Z",
+  "n_comparisons": 10461,
+  "why": "PC review F1/F2/F6/F7: headlines are convention-dependent; emit the conventions.",
+  "tiebreak_sensitivity": {
+    "default_alphabetical_what_c2_ran": {
+      "majority_differs": 0.4490010515247108,
+      "winner_reverses": 0.2977726794761495
+    },
+    "force_tie_as_paper_states": {
+      "majority_differs": 0.41219768664563616,
+      "winner_reverses": 0.025332186215466974
+    },
+    "B_first_mirror_check": {
+      "majority_differs": 0.3664085651467355,
+      "winner_reverses": 0.09377688557499284
+    },
+    "A_over_tie_hypothetical": {
+      "majority_differs": 0.4980403403116337,
+      "winner_reverses": 0.1677659879552624
+    },
+    "both_pools_unanimous_no_tiebreak": {
+      "n_items": 2885,
+      "majority_differs": 0.23570190641247835,
+      "winner_reverses": 0.09185441941074524
+    }
+  },
+  "label_skew_coarse": {
+    "A": 11104,
+    "B": 19743,
+    "T": 10997
+  },
+  "B_to_A_vote_ratio": 1.7780079250720462,
+  "leaderboard_tau_by_rule": {
+    "default_alphabetical_what_c2_ran": {
+      "tau": 1.0,
+      "ci95": [
+        0.8666666666666667,
+        1.0
+      ],
+      "models_displaced": 0,
+      "n_models": 6
+    },
+    "force_tie_as_paper_states": {
+      "tau": 1.0,
+      "ci95": [
+        0.8666666666666667,
+        1.0
+      ],
+      "models_displaced": 0,
+      "n_models": 6
+    },
+    "B_first_mirror_check": {
+      "tau": 1.0,
+      "ci95": [
+        0.8666666666666667,
+        1.0
+      ],
+      "models_displaced": 0,
+      "n_models": 6
+    },
+    "A_over_tie_hypothetical": {
+      "tau": 0.4666666666666667,
+      "ci95": [
+        0.06666666666666667,
+        0.7333333333333333
+      ],
+      "models_displaced": 4,
+      "n_models": 6
+    }
+  },
+  "resampling_unit": "prompt cluster (MultiPref doubles every prompt across model pairs)",
+  "quality_gap_buckets": {
+    "unanimous_subset_primary": {
+      "n_items": 2885,
+      "tertiles": {
+        "narrow": {
+          "n": 989,
+          "divergence": 0.3083923154701719,
+          "gap_range": [
+            0.0,
+            0.050364510516823224
+          ]
+        },
+        "middle": {
+          "n": 946,
+          "divergence": 0.24312896405919662,
+          "gap_range": [
+            0.05090277048507358,
+            0.17511178630392332
+          ]
+        },
+        "wide": {
+          "n": 950,
+          "divergence": 0.15263157894736842,
+          "gap_range": [
+            0.17565004627217368,
+            0.25029903735725384
+          ]
+        }
+      },
+      "pearson_r_gap_vs_divergence": -0.15422338199934452,
+      "reading": "falls with gap"
+    },
+    "default_alphabetical_what_c2_ran": {
+      "n_items": 10461,
+      "tertiles": {
+        "narrow": {
+          "n": 3937,
+          "divergence": 0.49860299720599444,
+          "gap_range": [
+            0.0,
+            0.02428448056825694
+          ]
+        },
+        "middle": {
+          "n": 3501,
+          "divergence": 0.43787489288774634,
+          "gap_range": [
+            0.050364510516823224,
+            0.1703487601198445
+          ]
+        },
+        "wide": {
+          "n": 3023,
+          "divergence": 0.39728746278531263,
+          "gap_range": [
+            0.17511178630392332,
+            0.25029903735725384
+          ]
+        }
+      },
+      "pearson_r_gap_vs_divergence": -0.08126570060747058,
+      "reading": "falls with gap"
+    },
+    "force_tie_as_paper_states": {
+      "n_items": 10461,
+      "tertiles": {
+        "narrow": {
+          "n": 3937,
+          "divergence": 0.349758699517399,
+          "gap_range": [
+            0.0,
+            0.02428448056825694
+          ]
+        },
+        "middle": {
+          "n": 3501,
+          "divergence": 0.4435875464153099,
+          "gap_range": [
+            0.050364510516823224,
+            0.1703487601198445
+          ]
+        },
+        "wide": {
+          "n": 3023,
+          "divergence": 0.4571617598412173,
+          "gap_range": [
+            0.17511178630392332,
+            0.25029903735725384
+          ]
+        }
+      },
+      "pearson_r_gap_vs_divergence": 0.09659118156639267,
+      "reading": "rises with gap"
+    },
+    "B_first_mirror_check": {
+      "n_items": 10461,
+      "tertiles": {
+        "narrow": {
+          "n": 3937,
+          "divergence": 0.46913893827787656,
+          "gap_range": [
+            0.0,
+            0.02428448056825694
+          ]
+        },
+        "middle": {
+          "n": 3501,
+          "divergence": 0.37475007140816907,
+          "gap_range": [
+            0.050364510516823224,
+            0.1703487601198445
+          ]
+        },
+        "wide": {
+          "n": 3023,
+          "divergence": 0.22295732715845187,
+          "gap_range": [
+            0.17511178630392332,
+            0.25029903735725384
+          ]
+        }
+      },
+      "pearson_r_gap_vs_divergence": -0.2195557462398498,
+      "reading": "falls with gap"
+    },
+    "A_over_tie_hypothetical": {
+      "n_items": 10461,
+      "tertiles": {
+        "narrow": {
+          "n": 3937,
+          "divergence": 0.4813309626619253,
+          "gap_range": [
+            0.0,
+            0.02428448056825694
+          ]
+        },
+        "middle": {
+          "n": 3501,
+          "divergence": 0.5032847757783491,
+          "gap_range": [
+            0.050364510516823224,
+            0.1703487601198445
+          ]
+        },
+        "wide": {
+          "n": 3023,
+          "divergence": 0.5137280846840887,
+          "gap_range": [
+            0.17511178630392332,
+            0.25029903735725384
+          ]
+        }
+      },
+      "pearson_r_gap_vs_divergence": 0.029713039470922166,
+      "reading": "flat"
+    },
+    "note": "Supersedes the 48.1%/51.9% figures in plan.json, which had no generator and did not reproduce, AND the single-convention version of this block, which reported only A_over_tie_hypothetical and read it as flat."
+  },
+  "judge_pool_split_three_way": {
+    "qwen36-35b-a3b": {
+      "n_pool_split_clean": 776,
+      "expert": 264,
+      "crowd": 359,
+      "neither": 153,
+      "expert_share_of_all": 0.3402061855670103,
+      "crowd_share_of_all": 0.46262886597938147,
+      "neither_share_of_all": 0.19716494845360824,
+      "crowd_share_of_decided": 0.5762439807383628
+    },
+    "qwen36-27b-dense": {
+      "n_pool_split_clean": 1531,
+      "expert": 501,
+      "crowd": 622,
+      "neither": 408,
+      "expert_share_of_all": 0.3272370999346832,
+      "crowd_share_of_all": 0.40627041149575444,
+      "neither_share_of_all": 0.26649248856956237,
+      "crowd_share_of_decided": 0.553873552983081
+    },
+    "gemma4-26b-a4b": {
+      "n_pool_split_clean": 1147,
+      "expert": 382,
+      "crowd": 453,
+      "neither": 312,
+      "expert_share_of_all": 0.3330427201394943,
+      "crowd_share_of_all": 0.3949433304272014,
+      "neither_share_of_all": 0.27201394943330426,
+      "crowd_share_of_decided": 0.5425149700598803
+    }
+  },
+  "wall_s": 197.6
+}

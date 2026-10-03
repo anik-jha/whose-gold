@@ -1,0 +1,39 @@
+{
+  "milestone": "c4-generalize-mtbench",
+  "utc": "2026-08-22T18:37:31Z",
+  "wall_s": 2.2,
+  "corpus": "lmsys/mt_bench_human_judgments (split=human)",
+  "convention_free_subset": {
+    "n_items": 246,
+    "majority_differs_rate": 0.3048780487804878,
+    "winner_reversal_rate_excl_ties": 0.08536585365853659,
+    "note": "both pools internally unanimous; no tie-break consulted"
+  },
+  "tie_break_used_for_full_set": [
+    "A",
+    "T",
+    "B"
+  ],
+  "pool_contrast": "benchmark authors vs recruited expert annotators",
+  "n_judgments": 3355,
+  "n_item_cells": 2396,
+  "n_items_both_pools": 292,
+  "majority_differs_rate": 0.3458904109589041,
+  "winner_reversal_rate_excl_ties": 0.10273972602739725,
+  "n_models_ranked": 6,
+  "kendall_tau_expert_vs_author": 1.0,
+  "kendall_tau_ci95": [
+    0.7333333333333333,
+    1.0
+  ],
+  "models_displaced": 0,
+  "max_rank_shift": 0,
+  "multipref_reference": {
+    "majority_differs_rate": 0.498,
+    "winner_reversal_rate_excl_ties": 0.168,
+    "kendall_tau": 1.0,
+    "models_displaced": 0
+  },
+  "resampling_unit": "question cluster (246 convention-free cells in 69 questions)",
+  "limitation": "the tau CI is computed on the 246 convention-free cells, the population Table 1 reports, resampling the 69 question clusters they sit in; it is wide ([0.7333, 1.0000]) because six models admit few discordant pairs, so modest rank changes are not excluded, though the point estimate shows none."
+}

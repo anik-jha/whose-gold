@@ -1,0 +1,54 @@
+{
+  "milestone": "c3-judge-pools",
+  "tag": "qwen36-35b-a3b",
+  "judge_output_mode": "json",
+  "served_model": "Qwen_Qwen3.6-35B-A3B-Q8_0.gguf",
+  "utc": "2026-08-09T19:15:03Z",
+  "wall_s": 6686.9,
+  "n_comparisons": 2500,
+  "n_scored": 2496,
+  "n_parse_failures": 8,
+  "n_request_errors": 8,
+  "position_inconsistency_rate_strict": 0.6161858974358975,
+  "position_inconsistency_rate_direction": 0.44591346153846156,
+  "strata": {
+    "pool_split": 1500,
+    "pool_agree": 1000
+  },
+  "judge_label_distribution_coarse": {
+    "B": 996,
+    "T": 1128,
+    "A": 372
+  },
+  "agreement_with_expert_majority": 0.406650641025641,
+  "agreement_with_crowd_majority": 0.43309294871794873,
+  "agreement_diff_expert_minus_crowd": -0.02644230769230771,
+  "agreement_diff_ci95": [
+    -0.05288461538461536,
+    0.0
+  ],
+  "erasure_vs_expert": 0.23637820512820512,
+  "erasure_vs_crowd": 0.21314102564102563,
+  "erasure_diff_expert_minus_crowd": 0.023237179487179488,
+  "erasure_diff_ci95": [
+    0.0012019230769230727,
+    0.04487179487179488
+  ],
+  "on_pool_split_items": {
+    "expert": 525,
+    "crowd": 591,
+    "neither": 382,
+    "n": 1498,
+    "expert_share": 0.35046728971962615,
+    "crowd_share": 0.3945260347129506
+  },
+  "usage": {
+    "prompt_tokens": 4340272,
+    "completion_tokens": 59289,
+    "n_calls": 4992,
+    "n_retries": 0
+  },
+  "verdict": {
+    "killed_by_prereg_bar": false
+  }
+}

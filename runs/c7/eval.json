@@ -1,0 +1,127 @@
+{
+  "milestone": "c7-ipw-judge-pools",
+  "utc": "2026-08-21T19:59:11Z",
+  "population": {
+    "n": 10461,
+    "pool_agree": 5251,
+    "pool_split": 5210,
+    "pool_split_frac": 0.49804
+  },
+  "judges": {
+    "qwen36-35b-a3b": {
+      "n_scored": 2496,
+      "sample_strata": {
+        "pool_split": 1498,
+        "pool_agree": 998
+      },
+      "sample_pool_split_frac": 0.60016,
+      "sample": {
+        "agree_expert": 0.40665,
+        "agree_crowd": 0.43309,
+        "agree_diff": -0.02644,
+        "agree_ci95": [
+          -0.05329,
+          0.0008
+        ],
+        "erasure_diff": 0.02324,
+        "erasure_ci95": [
+          0.0016,
+          0.04567
+        ]
+      },
+      "corpus_ipw": {
+        "agree_expert": 0.421,
+        "agree_crowd": 0.44294,
+        "agree_diff": -0.02194,
+        "agree_ci95": [
+          -0.04422,
+          0.00066
+        ],
+        "agree_excludes_zero": false,
+        "erasure_diff": 0.01843,
+        "erasure_ci95": [
+          -0.00189,
+          0.03915
+        ],
+        "erasure_excludes_zero": false
+      }
+    },
+    "qwen36-27b-dense": {
+      "n_scored": 2496,
+      "sample_strata": {
+        "pool_split": 1498,
+        "pool_agree": 998
+      },
+      "sample_pool_split_frac": 0.60016,
+      "sample": {
+        "agree_expert": 0.40224,
+        "agree_crowd": 0.44471,
+        "agree_diff": -0.04247,
+        "agree_ci95": [
+          -0.06771,
+          -0.01683
+        ],
+        "erasure_diff": 0.02684,
+        "erasure_ci95": [
+          0.00481,
+          0.04888
+        ]
+      },
+      "corpus_ipw": {
+        "agree_expert": 0.42178,
+        "agree_crowd": 0.45702,
+        "agree_diff": -0.03524,
+        "agree_ci95": [
+          -0.05619,
+          -0.01396
+        ],
+        "agree_excludes_zero": true,
+        "erasure_diff": 0.01972,
+        "erasure_ci95": [
+          -0.00038,
+          0.03972
+        ],
+        "erasure_excludes_zero": false
+      }
+    },
+    "gemma4-26b-a4b": {
+      "n_scored": 2495,
+      "sample_strata": {
+        "pool_split": 1497,
+        "pool_agree": 998
+      },
+      "sample_pool_split_frac": 0.6,
+      "sample": {
+        "agree_expert": 0.40922,
+        "agree_crowd": 0.43086,
+        "agree_diff": -0.02164,
+        "agree_ci95": [
+          -0.0477,
+          0.00401
+        ],
+        "erasure_diff": 0.02806,
+        "erasure_ci95": [
+          0.00521,
+          0.05051
+        ]
+      },
+      "corpus_ipw": {
+        "agree_expert": 0.42601,
+        "agree_crowd": 0.44397,
+        "agree_diff": -0.01797,
+        "agree_ci95": [
+          -0.03959,
+          0.00333
+        ],
+        "agree_excludes_zero": false,
+        "erasure_diff": 0.02414,
+        "erasure_ci95": [
+          0.00293,
+          0.04543
+        ],
+        "erasure_excludes_zero": true
+      }
+    }
+  },
+  "wall_s": 5.6
+}

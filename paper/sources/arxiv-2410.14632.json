@@ -1,0 +1,20 @@
+{
+ "arxiv_id": "2410.14632",
+ "resolved": true,
+ "title": "Diverging Preferences: When do Annotators Disagree and do Models Know?",
+ "published": "2024-10-18T17:32:22Z",
+ "updated": "2026-03-03T01:01:02Z",
+ "authors": [
+  "Michael JQ Zhang",
+  "Zhilin Wang",
+  "Jena D. Hwang",
+  "Yi Dong",
+  "Olivier Delalleau",
+  "Yejin Choi",
+  "Eunsol Choi",
+  "Xiang Ren",
+  "Valentina Pyatkin"
+ ],
+ "abstract": "We examine diverging preferences in human-labeled preference datasets. We develop a taxonomy of disagreement sources spanning ten categories across four high-level classes and find that the majority of disagreements are due to factors such as task underspecification or response style. Our findings challenge a standard assumption in reward modeling methods that annotator disagreements can be attributed to simple noise. We then explore how these findings impact two areas of LLM development: reward modeling training and evaluation. In our experiments, we demonstrate how standard reward modeling (e.g., Bradley-Terry) and LLM-as-Judge evaluation methods fail to account for divergence between annotators. These findings highlight challenges in LLM evaluations, which are greatly influenced by divisive features like response style, and in developing pluralistically aligned LLMs. To address these issues, we develop methods for identifying diverging preferences to mitigate their influence in evaluations and during LLM training.",
+ "retrieved_utc": "2026-08-22T05:19:33Z"
+}

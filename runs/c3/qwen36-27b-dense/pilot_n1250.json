@@ -1,0 +1,23 @@
+{
+  "milestone": "c3-pilot-underpowered",
+  "why": "The paper reports this failed pilot by name (Section 5, 'one honest complication'). Its eval.json was overwritten in place by the matched-power n=2500 rerun, so the only surviving record of it is the run log. This file transcribes that log block verbatim so the quoted numbers have a machine-readable source and can be checked by verify_paper_numbers.py, like every other number in the paper.",
+  "provenance": "runs/c3/c3_27b.log lines 104-112, transcribed 2026-08-20. Not recomputed: the pilot's raw.jsonl no longer exists.",
+  "judge": "qwen36-27b-dense",
+  "served": "Qwen_Qwen3.6-27B-Q8_0.gguf",
+  "n_comparisons": 1250,
+  "n_calls": 2500,
+  "estimator": "primary: midpoint order-combination over all scored items (the same estimator whose full-power value is -0.0425)",
+  "position_inconsistency_rate_strict": 0.9392,
+  "position_inconsistency_rate_direction": 0.248,
+  "agreement_with_expert_majority": 0.412,
+  "agreement_with_crowd_majority": 0.42,
+  "agreement_diff_expert_minus_crowd": -0.008,
+  "agreement_diff_ci95": [-0.044, 0.028],
+  "erasure_vs_expert": 0.2584,
+  "erasure_vs_crowd": 0.24,
+  "erasure_diff_expert_minus_crowd": 0.0184,
+  "erasure_diff_ci95": [-0.012, 0.0488],
+  "on_pool_split_items": {"n": 750, "expert_share": 0.357, "crowd_share": 0.371, "neither_share": 0.272},
+  "preregistered_verdict": "KILLED (null): the agreement CI includes zero at this sample size",
+  "superseded_by": "runs/c3/qwen36-27b-dense/eval.json, n=2500, diff -0.0425 CI [-0.0669, -0.0148]"
+}

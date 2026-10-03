@@ -1,0 +1,170 @@
+{
+  "milestone": "c6-displacement-threshold",
+  "utc": "2026-08-22T16:47:18Z",
+  "wall_s": 188.7,
+  "n_battles": 10461,
+  "n_models": 6,
+  "perturbation": {
+    "per_model_shift_crowd_minus_expert": {
+      "gpt-4-turbo-2024-04-09": -0.0054,
+      "meta-llama/Meta-Llama-3-70B-Instruct": 0.02783,
+      "meta-llama/Llama-2-70b-chat-hf": 0.0168,
+      "allenai/tulu-2-70b": -0.00469,
+      "gpt-3.5-turbo-0125": -0.02074,
+      "allenai/tulu-2-7b": -0.01384
+    },
+    "sd_of_shift": 0.0186,
+    "sd_of_pairwise_shift_difference": 0.0263,
+    "note": "The pool choice moves a model's win rate by this much. A swap between two adjacent models needs the DIFFERENCE of their shifts to exceed the gap between them, hence sd*sqrt(2)."
+  },
+  "observed_leaderboard": {
+    "models_by_expert_winrate": [
+      "gpt-4-turbo-2024-04-09",
+      "meta-llama/Meta-Llama-3-70B-Instruct",
+      "meta-llama/Llama-2-70b-chat-hf",
+      "allenai/tulu-2-70b",
+      "gpt-3.5-turbo-0125",
+      "allenai/tulu-2-7b"
+    ],
+    "expert_winrates": [
+      0.63204,
+      0.52151,
+      0.49232,
+      0.46486,
+      0.45689,
+      0.43177
+    ],
+    "adjacent_gaps": [
+      0.11052,
+      0.02919,
+      0.02746,
+      0.00798,
+      0.02512
+    ],
+    "smallest_adjacent_gap": 0.00798,
+    "p_swap_at_smallest_gap": 0.3809
+  },
+  "gaussian_route": {
+    "sd_pair_assumed_independent": 0.0263,
+    "sd_pair_measured_bootstrap": 0.01332,
+    "union_with_assumed_sd": 0.6206,
+    "union_with_measured_sd": 0.3184,
+    "note": "The Gaussian swap route assumes the two models' shifts are independent draws from the CROSS-MODEL dispersion, giving sd*sqrt(2). The bootstrap measures the sampling sd of each adjacent pair's shift DIFFERENCE directly, and it is about half that. Substituting the measured value brings the independent-union estimate back to the bootstrap's displacement rate; the assumed value roughly doubles it."
+  },
+  "calibration_of_the_illustrative_model": {
+    "sim_uniform_K6": 0.2931,
+    "sim_on_observed_gaps": 0.6977,
+    "bootstrap_measured": 0.2785,
+    "note": "The K=6 row of by_leaderboard_size agrees with the bootstrap only under UNIFORM spacing. Run the identical simulation on the observed gaps and it disagrees badly, because sd_of_shift is the dispersion of six models' realised shifts, not the sampling sd of one model's shift (measured at sd_shift_difference_measured, roughly half the sqrt(2)x value the Gaussian route assumes). The agreement at K=6 uniform is therefore a coincidence of two compensating errors and must not be reported as a validation of the model."
+  },
+  "unanimous_subset": {
+    "n_items": 2885,
+    "n_boot": 4000,
+    "p_any_displacement": 0.3465,
+    "note": "Same item bootstrap on the 2,885 comparisons where BOTH pools are internally unanimous - the population the headline divergence rates describe - so the displacement rate can be quoted for that population rather than only for the full corpus under the default tie-break."
+  },
+  "bootstrap": {
+    "n_boot": 4000,
+    "resampling_unit": "prompt cluster (98.2% of rows sit in a doubled prompt)",
+    "measured_adjacent_pairs": [
+      {
+        "above": "gpt-4-turbo-2024-04-09",
+        "below": "meta-llama/Meta-Llama-3-70B-Instruct",
+        "gap": 0.11052,
+        "p_swap_gaussian": 0.0,
+        "p_disagree_measured": 0.0,
+        "sd_shift_difference_measured": 0.01326
+      },
+      {
+        "above": "meta-llama/Meta-Llama-3-70B-Instruct",
+        "below": "meta-llama/Llama-2-70b-chat-hf",
+        "gap": 0.02919,
+        "p_swap_gaussian": 0.1335,
+        "p_disagree_measured": 0.003,
+        "sd_shift_difference_measured": 0.01374
+      },
+      {
+        "above": "meta-llama/Llama-2-70b-chat-hf",
+        "below": "allenai/tulu-2-70b",
+        "gap": 0.02746,
+        "p_swap_gaussian": 0.1483,
+        "p_disagree_measured": 0.0063,
+        "sd_shift_difference_measured": 0.01344
+      },
+      {
+        "above": "allenai/tulu-2-70b",
+        "below": "gpt-3.5-turbo-0125",
+        "gap": 0.00798,
+        "p_swap_gaussian": 0.3809,
+        "p_disagree_measured": 0.226,
+        "sd_shift_difference_measured": 0.01324
+      },
+      {
+        "above": "gpt-3.5-turbo-0125",
+        "below": "allenai/tulu-2-7b",
+        "gap": 0.02512,
+        "p_swap_gaussian": 0.1698,
+        "p_disagree_measured": 0.0515,
+        "sd_shift_difference_measured": 0.01291
+      }
+    ],
+    "tau_mean": 0.9615,
+    "tau_ci95": [
+      0.8667,
+      1.0
+    ],
+    "p_any_displacement": 0.2785,
+    "mean_models_displaced": 0.5685,
+    "note": "Resamples items and recomputes BOTH leaderboards. The rate at which displacement occurs here is the honest read on how decisive the observed zero-displacement result is."
+  },
+  "threshold": {
+    "p_swap_by_gap": {
+      "0.005": 0.4246,
+      "0.01": 0.3519,
+      "0.02": 0.2235,
+      "0.03": 0.127,
+      "0.05": 0.0287,
+      "0.08": 0.0012,
+      "0.1": 0.0001
+    },
+    "gap_for_p_swap_0.05": -0.04327,
+    "by_leaderboard_size": [
+      {
+        "n_models": 6,
+        "uniform_gap": 0.04005,
+        "p_adjacent_swap_marginal": 0.0639,
+        "p_any_displacement": 0.2931,
+        "p_any_displacement_indep_product": 0.2812
+      },
+      {
+        "n_models": 10,
+        "uniform_gap": 0.02225,
+        "p_adjacent_swap_marginal": 0.1988,
+        "p_any_displacement": 0.9177,
+        "p_any_displacement_indep_product": 0.8639
+      },
+      {
+        "n_models": 20,
+        "uniform_gap": 0.01054,
+        "p_adjacent_swap_marginal": 0.3443,
+        "p_any_displacement": 1.0,
+        "p_any_displacement_indep_product": 0.9997
+      },
+      {
+        "n_models": 30,
+        "uniform_gap": 0.00691,
+        "p_adjacent_swap_marginal": 0.3964,
+        "p_any_displacement": 1.0,
+        "p_any_displacement_indep_product": 1.0
+      },
+      {
+        "n_models": 50,
+        "uniform_gap": 0.00409,
+        "p_adjacent_swap_marginal": 0.4383,
+        "p_any_displacement": 1.0,
+        "p_any_displacement_indep_product": 1.0
+      }
+    ],
+    "note": "by_leaderboard_size is an ILLUSTRATIVE SCENARIO, not a measurement. It holds the measured per-model shift SD fixed, assumes those shifts are iid Gaussian across models, and spreads K models uniformly across the observed win-rate span. p_any_displacement is Monte Carlo over per-model shifts, so adjacent pairs correctly share a model; the indep_product column is the naive closed form kept for comparison. None of these is a lower bound: real arenas cluster more tightly than uniform (raising displacement) but correlated shifts across models lower it, and we have not measured that correlation."
+  }
+}

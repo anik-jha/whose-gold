@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+runs/_replay/
+paper/main.pdf
+paper/main.log
+paper/*.aux
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk

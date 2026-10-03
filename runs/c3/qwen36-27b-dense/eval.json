@@ -1,0 +1,54 @@
+{
+  "milestone": "c3-judge-pools",
+  "tag": "qwen36-27b-dense",
+  "judge_output_mode": "json",
+  "served_model": "Qwen_Qwen3.6-27B-Q8_0.gguf",
+  "utc": "2026-08-10T03:36:15Z",
+  "wall_s": 7322.1,
+  "n_comparisons": 2500,
+  "n_scored": 2496,
+  "n_parse_failures": 8,
+  "n_request_errors": 8,
+  "position_inconsistency_rate_strict": 0.9306891025641025,
+  "position_inconsistency_rate_direction": 0.24519230769230768,
+  "strata": {
+    "pool_split": 1500,
+    "pool_agree": 1000
+  },
+  "judge_label_distribution_coarse": {
+    "A": 571,
+    "B": 1287,
+    "T": 638
+  },
+  "agreement_with_expert_majority": 0.40224358974358976,
+  "agreement_with_crowd_majority": 0.44471153846153844,
+  "agreement_diff_expert_minus_crowd": -0.04246794871794868,
+  "agreement_diff_ci95": [
+    -0.06690705128205127,
+    -0.014823717948717952
+  ],
+  "erasure_vs_expert": 0.25600961538461536,
+  "erasure_vs_crowd": 0.22916666666666666,
+  "erasure_diff_expert_minus_crowd": 0.026842948717948706,
+  "erasure_diff_ci95": [
+    0.004807692307692318,
+    0.04808693910256398
+  ],
+  "on_pool_split_items": {
+    "expert": 488,
+    "crowd": 594,
+    "neither": 416,
+    "n": 1498,
+    "expert_share": 0.3257676902536716,
+    "crowd_share": 0.3965287049399199
+  },
+  "usage": {
+    "prompt_tokens": 3794810,
+    "completion_tokens": 41061,
+    "n_calls": 4344,
+    "n_retries": 0
+  },
+  "verdict": {
+    "killed_by_prereg_bar": false
+  }
+}

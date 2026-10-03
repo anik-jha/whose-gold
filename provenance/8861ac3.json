@@ -1,0 +1,18 @@
+{
+  "commit": "8861ac3",
+  "commit_metadata": "commit 8861ac3b2cc5e15072ab9d769ce00a4f534e6f5b\nAuthor:     Anik Jha <anik.k.jha@gmail.com>\nAuthorDate: Sun Aug 9 08:12:27 2026 -0700\nCommit:     Anik Jha <anik.k.jha@gmail.com>\nCommitDate: Sun Aug 9 08:12:27 2026 -0700\n\n    [c2] NULL: annotator pool does not change the leaderboard; item-level divergence does not aggregate\n    \n    Problem: test whether choosing expert vs crowd gold labels changes model ranking -\n    the analysis arXiv 2410.19133 explicitly leaves as future work in its Limitations.\n    \n    Evidence: runs/c2/eval.json, zero GPU, pure re-analysis of existing labels.\n    NULL on the headline: expert-gold and crowd-gold leaderboards are IDENTICAL,\n    Kendall tau=1.0000, 95% CI [0.8667, 1.0000] over 2000 paired bootstrap resamples,\n    0/6 models displaced. Reported as a null per the pre-registered bar rather than\n    enlarging the model set to hunt for a flip.\n    What survives: 16.8% of items (1,755/10,461) have expert and crowd majorities\n    choosing OPPOSITE winners with ties excluded; 49.8% differ in majority label\n    overall; divergence is flat across model-quality gaps (48.1% close vs 51.9% wide).\n    Also recorded as NOT REAL: the soft-vs-hard tau=0.8667 is one adjacent swap\n    between models 0.5pp apart - statistically indistinguishable, must not be claimed.\n    Limitation recorded: 6 widely-spaced models is a weak test of rank stability.\n    \n    Next: C3, which annotator pool do LLM judges track - now the highest-value\n    remaining experiment and the only one needing GPU.\n",
+  "h1_ranking_milestones": [
+    {
+      "id": "h1-rankings",
+      "title": "C2/H1: does whose-gold or soft-vs-hard change the leaderboard?",
+      "status": "done",
+      "eta": "2 days",
+      "done_when": {
+        "type": "json_key",
+        "path": "runs/c2/eval.json",
+        "key": "kendall_tau_expert_vs_crowd"
+      },
+      "notes": "PRE-REGISTERED KILL: Kendall tau > 0.9 between disagreement-aware and single-label rankings across all team configurations - report the null and stop. Baselines a reviewer will demand: majority vote, Dawid-Skene, and STABLEVAL (2605.02122) itself. Five team configs: agent-only, human-only, agent-proposes/human-reviews, human-proposes/agent-reviews, agent-with-abstention+escalation. RESULT: NULL. tau=1.0000, CI [0.8667,1.0000], 0/6 displaced. Pre-registered bar said report the null and stop, not enlarge the sweep. Complied."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "milestone": "c2-whose-gold",
+  "utc": "2026-08-22T18:37:28Z",
+  "wall_s": 46.3,
+  "corpus": "allenai/multipref",
+  "prior_art_note": "arXiv 2410.19133 Limitations: 'One of our key assumptions is that there is no variability in intra-group annotators ... We leave this exploration for future work.'",
+  "preregistered_kill_bar": {
+    "kendall_tau_gt": 0.9,
+    "and_ci_low_gt": 0.9
+  },
+  "n_battles": 10461,
+  "majority_differs_rate": 0.4980403403116337,
+  "winner_reversal_rate_excl_ties": 0.1677659879552624,
+  "n_winner_reversals": 1755,
+  "min_battles_for_leaderboard": 50,
+  "n_models_ranked": 6,
+  "kendall_tau_expert_vs_crowd": 1.0,
+  "kendall_tau_ci95": [
+    0.8666666666666667,
+    1.0
+  ],
+  "n_bootstrap": 2000,
+  "resampling_unit": "prompt cluster (MultiPref doubles every prompt across model pairs)",
+  "models_displaced": 0,
+  "max_rank_shift": 0,
+  "kendall_tau_soft_vs_hard_pooled": 0.8666666666666667,
+  "leaderboard": [
+    {
+      "model": "gpt-4-turbo-2024-04-09",
+      "battles": 3518,
+      "expert_winrate": 0.632035247299602,
+      "crowd_winrate": 0.6266344513928368,
+      "expert_rank": 1,
+      "crowd_rank": 1,
+      "rank_shift": 0
+    },
+    {
+      "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+      "battles": 3486,
+      "expert_winrate": 0.5215146299483648,
+      "crowd_winrate": 0.5493402180149168,
+      "expert_rank": 2,
+      "crowd_rank": 2,
+      "rank_shift": 0
+    },
+    {
+      "model": "meta-llama/Llama-2-70b-chat-hf",
+      "battles": 3452,
+      "expert_winrate": 0.49232329084588644,
+      "crowd_winrate": 0.509125144843569,
+      "expert_rank": 3,
+      "crowd_rank": 3,
+      "rank_shift": 0
+    },
+    {
+      "model": "allenai/tulu-2-70b",
+      "battles": 3515,
+      "expert_winrate": 0.4648648648648649,
+      "crowd_winrate": 0.4601706970128023,
+      "expert_rank": 4,
+      "crowd_rank": 4,
+      "rank_shift": 0
+    },
+    {
+      "model": "gpt-3.5-turbo-0125",
+      "battles": 3375,
+      "expert_winrate": 0.4568888888888889,
+      "crowd_winrate": 0.4361481481481482,
+      "expert_rank": 5,
+      "crowd_rank": 5,
+      "rank_shift": 0
+    },
+    {
+      "model": "allenai/tulu-2-7b",
+      "battles": 3576,
+      "expert_winrate": 0.4317673378076063,
+      "crowd_winrate": 0.4179250559284116,
+      "expert_rank": 6,
+      "crowd_rank": 6,
+      "rank_shift": 0
+    }
+  ],
+  "verdict": {
+    "killed_by_prereg_bar": false
+  }
+}

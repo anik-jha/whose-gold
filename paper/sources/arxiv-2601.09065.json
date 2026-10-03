@@ -1,0 +1,13 @@
+{
+ "arxiv_id": "2601.09065",
+ "resolved": true,
+ "title": "Beyond Consensus: Perspectivist Modeling and Evaluation of Annotator Disagreement in NLP",
+ "published": "2026-01-14T01:26:29Z",
+ "updated": "2026-01-17T17:58:09Z",
+ "authors": [
+  "Yinuo Xu",
+  "David Jurgens"
+ ],
+ "abstract": "Annotator disagreement is widespread in NLP, particularly for subjective and ambiguous tasks such as toxicity detection and stance analysis. While early approaches treated disagreement as noise to be removed, recent work increasingly models it as a meaningful signal reflecting variation in interpretation and perspective. This survey provides a unified view of disagreement-aware NLP methods. We first present a domain-agnostic taxonomy of the sources of disagreement spanning data, task, and annotator factors. We then synthesize modeling approaches using a common framework defined by prediction targets and pooling structure, highlighting a shift from consensus learning toward explicitly modeling disagreement, and toward capturing structured relationships among annotators. We review evaluation metrics for both predictive performance and annotator behavior, and noting that most fairness evaluations remain descriptive rather than normative. We conclude by identifying open challenges and future directions, including integrating multiple sources of variation, developing disagreement-aware interpretability frameworks, and grappling with the practical tradeoffs of perspectivist modeling.",
+ "retrieved_utc": "2026-08-22T05:19:34Z"
+}

@@ -1,0 +1,18 @@
+{
+  "commit": "f4301a2",
+  "commit_metadata": "commit f4301a285464b67f0d891850aad4694afc0a35da\nAuthor:     Anik Jha <anik.k.jha@gmail.com>\nAuthorDate: Sun Aug 9 07:54:10 2026 -0700\nCommit:     Anik Jha <anik.k.jha@gmail.com>\nCommitDate: Sun Aug 9 07:54:10 2026 -0700\n\n    [kickoff] version runs/plan.json\n    \n    Problem: runs/ was gitignored wholesale, which would have left the plan ledger - the\n    single source of truth for pre-registered bars - untracked and losable.\n    Evidence: git ls-files showed only 3 files; plan.json absent.\n    Next: unchanged.\n",
+  "h1_ranking_milestones": [
+    {
+      "id": "h1-rankings",
+      "title": "H1: team-configuration ranking reversal",
+      "status": "planned",
+      "eta": "2 days",
+      "done_when": {
+        "type": "json_key",
+        "path": "runs/h1/eval.json",
+        "key": "kendall_tau"
+      },
+      "notes": "PRE-REGISTERED KILL: Kendall tau > 0.9 between disagreement-aware and single-label rankings across all team configurations - report the null and stop. Baselines a reviewer will demand: majority vote, Dawid-Skene, and STABLEVAL (2605.02122) itself. Five team configs: agent-only, human-only, agent-proposes/human-reviews, human-proposes/agent-reviews, agent-with-abstention+escalation."
+    }
+  ]
+}

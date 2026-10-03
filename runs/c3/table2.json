@@ -1,0 +1,44 @@
+{
+  "gemma4-26b-a4b": {
+    "n_items_scored": 2495,
+    "direction_inconsistency": 0.236874,
+    "n_clean": 1904,
+    "agree_expert": 0.431723,
+    "agree_crowd": 0.469013,
+    "diff": -0.03729,
+    "ci95": [
+      -0.067227,
+      -0.007878
+    ],
+    "replicates": true,
+    "preregistered_sample": 2500
+  },
+  "qwen36-27b-dense": {
+    "n_items_scored": 2496,
+    "direction_inconsistency": 0.245192,
+    "n_clean": 1884,
+    "agree_expert": 0.426752,
+    "agree_crowd": 0.478769,
+    "diff": -0.052017,
+    "ci95": [
+      -0.082272,
+      -0.022293
+    ],
+    "replicates": true,
+    "preregistered_sample": 2500
+  },
+  "qwen36-35b-a3b": {
+    "n_items_scored": 2496,
+    "direction_inconsistency": 0.445913,
+    "n_clean": 1383,
+    "agree_expert": 0.46927,
+    "agree_crowd": 0.537961,
+    "diff": -0.068691,
+    "ci95": [
+      -0.103398,
+      -0.033984
+    ],
+    "replicates": true,
+    "preregistered_sample": 2500
+  }
+}
